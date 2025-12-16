@@ -1,0 +1,851 @@
+hub EpiMapCustom
+shortLabel EpiMap release v0.9 (Custom TrackHub)
+longLabel Custom trackHub per mark and sample group tracks for EpiMap v0.9
+useOneFile on
+email cboix@mit.edu
+
+
+genome hg19
+
+track EpiMapBWSig
+compositeTrack on
+shortLabel All Signal Tracks
+longLabel All observed and imputed signal tracks from EpiMap
+group epimap
+subGroup1 view Views Sig=Signal
+subGroup2 sampleType Sample_Type BSS01451=pons_male_adult_(78_years) BSS01554=SK-N-DZ BSS01562=SK-N-SH
+subGroup3 assayType Assay_Type  DNase-seq=DNase-seq H2AFZ=H2AFZ H3K27ac=H3K27ac H3K27me3=H3K27me3 H3K36me3=H3K36me3 H3K4me1=H3K4me1 H3K4me2=H3K4me2 H3K4me3=H3K4me3 H3K79me2=H3K79me2 H3K9ac=H3K9ac H3K9me3=H3K9me3 H4K20me1=H4K20me1 ATAC-seq=ATAC-seq
+subGroup4 dataType Data_Type Observed=Observed Imputed=Imputed
+subGroup5 donor Donor  ENCDO000ABD=ENCDO000ABD ENCDO317XRR=ENCDO317XRR ENCDO340AAA=ENCDO340AAA
+dimensions dimensionX=assayType dimensionY=sampleType dimA=dataType dimB=donor
+filterComposite on
+sortOrder cellType=+ assayType=+ donor=+
+dragAndDrop on
+visibility hide
+priority 21
+type bed 3
+noInherit on
+
+track EpiMapBWSigView
+shortLabel Signal
+view Sig
+maxHeightPixels 64:32:16
+parent EpiMapBWSig
+type bigWig
+visibility dense
+
+track BW_BSS01451_H3K36me3_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K36me3 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K36me3 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K27me3_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K27me3 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K27me3 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K79me2_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K79me2 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K79me2.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K79me2 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K4me1_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K4me1 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K4me1 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K4me2_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K4me2 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K4me2.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K4me2 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K4me3_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K4me3 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K4me3 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_ATAC-seq_Imp
+shortLabel Imp PONS
+longLabel BSS01451 ATAC-seq pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_ATAC-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=ATAC-seq dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H2AFZ_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H2AFZ pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H2AFZ.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H2AFZ dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K27ac_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K27ac pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K27ac dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_DNase-seq_Obs
+shortLabel Obs PONS
+longLabel BSS01451 DNase-seq pons male adult (78 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS01451.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=DNase-seq dataType=Observed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H4K20me1_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H4K20me1 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H4K20me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H4K20me1 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K9ac_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K9ac pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K9ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K9ac dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01451_H3K9me3_Imp
+shortLabel Imp PONS
+longLabel BSS01451 H3K9me3 pons male adult (78 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01451_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 197,145,43
+metadata "Epigenome ShortName"="PONS" "Epigenome FullName"="pons male adult (78 years)" "Group"="<span style="color:#C5912B">Brain</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO317XRR"
+subGroups view=Sig sampleType=BSS01451 assayType=H3K9me3 dataType=Imputed donor=ENCDO317XRR
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K79me2_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K79me2 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K79me2.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K79me2 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K9ac_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K9ac SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K9ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K9ac dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K9me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K9me3 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K9me3 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H4K20me1_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H4K20me1 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H4K20me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H4K20me1 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H2AFZ_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H2AFZ SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H2AFZ.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H2AFZ dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K27me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K27me3 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K27me3 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_ATAC-seq_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 ATAC-seq SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_ATAC-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=ATAC-seq dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K4me1_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K4me1 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K4me1 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K4me2_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K4me2 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K4me2.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K4me2 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K4me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K4me3 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K4me3 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K36me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K36me3 SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K36me3 dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_H3K27ac_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01554 H3K27ac SK-N-DZ (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01554_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=H3K27ac dataType=Imputed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01554_DNase-seq_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01554 DNase-seq SK-N-DZ (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS01554.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-DZ" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO340AAA"
+subGroups view=Sig sampleType=BSS01554 assayType=DNase-seq dataType=Observed donor=ENCDO340AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K4me1_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K4me1 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K4me1 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K4me2_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K4me2 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me2_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K4me2 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K4me3_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K4me3 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K4me3 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K79me2_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K79me2 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K79me2_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K79me2 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K9ac_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K9ac SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9ac_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K9ac dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_DNase-seq_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 DNase-seq SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS01562.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=DNase-seq dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H2AFZ_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H2AFZ SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H2AFZ_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H2AFZ dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K27ac_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K27ac SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K27ac dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K27me3_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K27me3 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K27me3 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K36me3_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K36me3 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K36me3_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K36me3 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_ATAC-seq_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 ATAC-seq SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_ATAC-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=ATAC-seq dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_DNase-seq_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 DNase-seq SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=DNase-seq dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H2AFZ_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H2AFZ SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H2AFZ.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H2AFZ dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K27ac_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K27ac SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K27ac dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K27me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K27me3 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K27me3 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K36me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K36me3 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K36me3 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K4me1_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K4me1 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K4me1 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K4me2_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K4me2 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K4me2.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K4me2 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K4me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K4me3 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K4me3 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K79me2_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K79me2 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K79me2.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K79me2 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K9ac_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K9ac SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K9ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K9ac dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K9me3_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H3K9me3 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K9me3 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H4K20me1_Imp
+shortLabel Imp NEUROBLASTOMA
+longLabel BSS01562 H4K20me1 SK-N-SH (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01562_H4K20me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H4K20me1 dataType=Imputed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H3K9me3_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H3K9me3 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H3K9me3 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
+
+track BW_BSS01562_H4K20me1_Obs
+shortLabel Obs NEUROBLASTOMA
+longLabel BSS01562 H4K20me1 SK-N-SH (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H4K20me1_BSS01562.sub_VS_FINAL_WCE_BSS01562.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 0,0,0
+metadata "Epigenome ShortName"="NEUROBLASTOMA" "Epigenome FullName"="SK-N-SH" "Group"="<span style="color:#000000">Cancer</span>" "Type"="cell line" "Sex"="female" "Donor"="ENCDO000ABD"
+subGroups view=Sig sampleType=BSS01562 assayType=H4K20me1 dataType=Observed donor=ENCDO000ABD
+parent EpiMapBWSigView off
